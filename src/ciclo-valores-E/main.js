@@ -8,14 +8,18 @@ class Factorial {
         return fact;
     }
 
-    getResult() {
+    getResult(n) {
         let answer = 1;
-        for (let i = 1; i < 10; i++) {
+        if (n >= 1) {
+        for (let i = 1; i < n; i++) {
             answer = answer + (1/this.factorial(i));
         }
         return answer;
+        } else {
+            return 'Not Valid input';
+        }
     }
 }
 
 let factorial = new Factorial();
-console.log(factorial.getResult())
+console.log(factorial.getResult(10))
